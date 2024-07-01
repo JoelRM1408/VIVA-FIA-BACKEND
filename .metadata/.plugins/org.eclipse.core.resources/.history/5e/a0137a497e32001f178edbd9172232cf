@@ -1,0 +1,84 @@
+package com.example.demo.DTO;
+
+public class ProyectoDTO {
+	private String nombre;
+	private String desc;
+	private String fechaini;
+	private String fechafin;
+	private float ppto;
+	private String estadopro;
+	
+	private int TipoProid;
+	private int Semestreid;
+	private int Escuelaid;
+	
+	public ProyectoDTO() {
+	}
+	public ProyectoDTO(String nombre, String desc, String fechaini, String fechafin, float ppto, String estadopro,
+			int tipoProid, int semestreid, int escuelaid) {
+		this.nombre = nombre;
+		this.desc = desc;
+		this.fechaini = fechaini;
+		this.fechafin = fechafin;
+		this.ppto = ppto;
+		this.estadopro = estadopro;
+		TipoProid = tipoProid;
+		Semestreid = semestreid;
+		Escuelaid = escuelaid;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	public String getFechaini() {
+		return fechaini;
+	}
+	public void setFechaini(String fechaini) {
+		this.fechaini = fechaini;
+	}
+	public String getFechafin() {
+		return fechafin;
+	}
+	public void setFechafin(String fechafin) {
+		this.fechafin = fechafin;
+	}
+	public float getPpto() {
+		return ppto;
+	}
+	public void setPpto(float ppto) {
+		this.ppto = ppto;
+	}
+	public String getEstadopro() {
+		return estadopro;
+	}
+	public void setEstadopro(String estadopro) {
+		this.estadopro = estadopro;
+	}
+	public int getTipoProid() {
+		return TipoProid;
+	}
+	public void setTipoProid(int tipoProid) {
+		TipoProid = tipoProid;
+	}
+	public int getSemestreid() {
+		return Semestreid;
+	}
+	public void setSemestreid(int semestreid) {
+		Semestreid = semestreid;
+	}
+	public int getEscuelaid() {
+		return Escuelaid;
+	}
+	public void setEscuelaid(int escuelaid) {
+		Escuelaid = escuelaid;
+	}
+	
+}

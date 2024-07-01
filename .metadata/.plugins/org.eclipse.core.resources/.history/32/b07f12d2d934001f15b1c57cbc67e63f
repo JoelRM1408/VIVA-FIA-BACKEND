@@ -1,0 +1,27 @@
+package com.example.demo.DTO;
+
+public class DirectorEscuelaDTO {
+	private int codigodir;
+	private int Personaid;
+	
+	public DirectorEscuelaDTO() {
+		
+	}
+	public DirectorEscuelaDTO(int codigodir, int personaid) {
+		this.codigodir = codigodir;
+		Personaid = personaid;
+	}
+	public int getCodigodir() {
+		return codigodir;
+	}
+	public void setCodigodir(int codigodir) {
+		this.codigodir = codigodir;
+	}
+	public int getPersonaid() {
+		return Personaid;
+	}
+	public void setPersonaid(int personaid) {
+		Personaid = personaid;
+	}
+	
+}

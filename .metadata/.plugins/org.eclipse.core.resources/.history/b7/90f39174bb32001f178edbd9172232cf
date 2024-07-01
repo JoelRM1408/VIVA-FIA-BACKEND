@@ -1,0 +1,9 @@
+package com.example.demo.DTO;
+
+public class EscuelaDTO {
+	private String nombresc;
+	
+	private int DirectorEscid;
+	private int CoordinadorTutid;
+
+}

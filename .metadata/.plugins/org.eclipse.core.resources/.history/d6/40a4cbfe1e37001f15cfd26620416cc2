@@ -1,0 +1,22 @@
+package com.example.demo.DTO;
+
+public class TipoSesDTO {
+	private String nombresem;
+
+	public TipoSesDTO() {
+		
+	}
+
+	public TipoSesDTO(String nombresem) {
+		this.nombresem = nombresem;
+	}
+
+	public String getNombresem() {
+		return nombresem;
+	}
+
+	public void setNombresem(String nombresem) {
+		this.nombresem = nombresem;
+	}
+
+}

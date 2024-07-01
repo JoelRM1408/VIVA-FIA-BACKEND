@@ -1,0 +1,33 @@
+package com.example.demo.DTO;
+
+public class CoordinadorTutoriaDTO {
+	private int codigocoordtut;
+	
+	private int Personaid;
+
+	public CoordinadorTutoriaDTO() {
+		
+	}
+
+	public CoordinadorTutoriaDTO(int codigocoordtut, int personaid) {
+		this.codigocoordtut = codigocoordtut;
+		Personaid = personaid;
+	}
+
+	public int getCodigocoordtut() {
+		return codigocoordtut;
+	}
+
+	public void setCodigocoordtut(int codigocoordtut) {
+		this.codigocoordtut = codigocoordtut;
+	}
+
+	public int getPersonaid() {
+		return Personaid;
+	}
+
+	public void setPersonaid(int personaid) {
+		Personaid = personaid;
+	}
+	
+}

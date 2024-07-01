@@ -1,0 +1,75 @@
+package com.example.demo.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "COORDINADOR_TUT")
+public class CoordinadorTutoria {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_COORDINADOR_TUT")
+	private int idDiresc;
+	
+	@Column(name = "NOMBRE")
+	private String nombrecoordtut;
+	
+	@Column(name = "CODIGO")
+	private int codigocoordtut;
+	
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "coordtut")
+	@JsonIgnore
+	private Jornada escuela;
+
+	public CoordinadorTutoria() {
+		
+	}
+
+	public CoordinadorTutoria(int idDiresc, String nombrecoordtut, int codigocoordtut, Jornada escuela) {
+		this.idDiresc = idDiresc;
+		this.nombrecoordtut = nombrecoordtut;
+		this.codigocoordtut = codigocoordtut;
+		this.escuela = escuela;
+	}
+
+	public int getIdDiresc() {
+		return idDiresc;
+	}
+
+	public void setIdDiresc(int idDiresc) {
+		this.idDiresc = idDiresc;
+	}
+
+	public String getNombrecoordtut() {
+		return nombrecoordtut;
+	}
+
+	public void setNombrecoordtut(String nombrecoordtut) {
+		this.nombrecoordtut = nombrecoordtut;
+	}
+
+	public int getCodigocoordtut() {
+		return codigocoordtut;
+	}
+
+	public void setCodigocoordtut(int codigocoordtut) {
+		this.codigocoordtut = codigocoordtut;
+	}
+
+	public Jornada getEscuela() {
+		return escuela;
+	}
+
+	public void setEscuela(Jornada escuela) {
+		this.escuela = escuela;
+	}
+	
+}

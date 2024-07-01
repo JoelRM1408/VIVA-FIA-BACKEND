@@ -1,0 +1,22 @@
+package com.example.demo.DTO;
+
+public class ProyectoDTO {
+	private String nombre;
+	private String desc;
+	private String fechaini;
+	private String fechafin;
+	private float ppto;
+	private String estadopro;
+	private int TipoProid;
+	private int Semestreid;
+	private int Escuelaid;
+	
+	public ProyectoDTO() {
+		
+	}
+	
+
+
+	
+	
+}

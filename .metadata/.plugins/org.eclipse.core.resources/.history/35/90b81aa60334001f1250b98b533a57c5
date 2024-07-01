@@ -1,0 +1,38 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Escuela;
+import com.example.demo.service.EscuelaService;
+
+@RestController
+@RequestMapping("/apiescuela")
+public class EscuelaController {
+	@Autowired
+	EscuelaService escuelaService;
+	
+	@GetMapping("/listar")
+	public ResponseEntity<List<Escuela>> listar(){
+		List<Escuela> listaEscuela =escuelaService.Listar();
+		return new ResponseEntity<List<Escuela>>(listaEscuela,HttpStatus.OK);			
+	}
+	
+	@GetMapping("/detalle/{id}")
+	public ResponseEntity<Escuela>getById(@PathVariable("id")int id){
+		if(!escuelaService.existById(id)) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		} else {
+			Escuela escuela =escuelaService.findById(id).get();
+			return new ResponseEntity<Escuela>(escuela,HttpStatus.OK);
+		}
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.example.demo.DTO;
+
+public class ProyectoDTO {
+	private int TipoProid;
+	private int Semestreid;
+	private int Escuelaid;
+}

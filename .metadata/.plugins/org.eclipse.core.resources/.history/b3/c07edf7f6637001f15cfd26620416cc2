@@ -1,0 +1,15 @@
+package com.example.demo.DTO;
+
+public class TutorDTO {
+	private int codigotut;
+	
+	private int idEscuela;
+	private int idPersona;
+	
+	public TutorDTO() {
+		
+	}
+	
+	
+	
+}

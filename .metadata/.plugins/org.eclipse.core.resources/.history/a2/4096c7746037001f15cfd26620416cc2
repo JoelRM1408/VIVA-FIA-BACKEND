@@ -1,0 +1,22 @@
+package com.example.demo.DTO;
+
+public class CicloDTO {
+	private String nombrefac;
+
+	public CicloDTO() {
+		
+	}
+
+	public CicloDTO(String nombrefac) {
+		this.nombrefac = nombrefac;
+	}
+
+	public String getNombrefac() {
+		return nombrefac;
+	}
+
+	public void setNombrefac(String nombrefac) {
+		this.nombrefac = nombrefac;
+	}
+	
+}

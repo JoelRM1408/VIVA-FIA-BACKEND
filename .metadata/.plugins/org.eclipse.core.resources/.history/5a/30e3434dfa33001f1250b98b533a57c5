@@ -1,0 +1,29 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Proyecto;
+import com.example.demo.entity.Semestre;
+import com.example.demo.service.SemestreService;
+
+@RestController
+@RequestMapping("/apisemestre")
+public class SemestreController {
+	@Autowired
+	SemestreService semestreService;
+	
+	@GetMapping("/listar")
+	public ResponseEntity<List<Semestre>> listar(){
+		List<Semestre> listaSemestre =semestreService.Listar();
+		return new ResponseEntity<List<Semestre>>(listaSemestre, HttpStatus.OK);
+	}
+	
+	
+}

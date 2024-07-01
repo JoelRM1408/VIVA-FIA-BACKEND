@@ -1,0 +1,45 @@
+package com.example.demo.DTO;
+
+public class EscuelaDTO {
+	private String nombresc;
+	private int idDiresc;
+	private int idCoordtut;
+	private int idFacultad;
+	
+	public EscuelaDTO() {
+		
+	}
+
+	public EscuelaDTO(String nombresc, int directorEscid, int coordinadorTutid, int facultadid) {
+		this.nombresc = nombresc;
+		DirectorEscid = directorEscid;
+		CoordinadorTutid = coordinadorTutid;
+		Facultadid = facultadid;
+	}
+	
+	public String getNombresc() {
+		return nombresc;
+	}
+	public void setNombresc(String nombresc) {
+		this.nombresc = nombresc;
+	}
+	public int getDirectorEscid() {
+		return DirectorEscid;
+	}
+	public void setDirectorEscid(int directorEscid) {
+		DirectorEscid = directorEscid;
+	}
+	public int getCoordinadorTutid() {
+		return CoordinadorTutid;
+	}
+	public void setCoordinadorTutid(int coordinadorTutid) {
+		CoordinadorTutid = coordinadorTutid;
+	}
+	public int getFacultadid() {
+		return Facultadid;
+	}
+	public void setFacultadid(int facultadid) {
+		Facultadid = facultadid;
+	}
+	
+}

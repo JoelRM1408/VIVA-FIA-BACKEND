@@ -1,0 +1,22 @@
+package com.example.demo.DTO;
+
+public class LugarDTO {
+	private String nombrefac;
+
+	public LugarDTO() {
+		
+	}
+
+	public LugarDTO(String nombrefac) {
+		this.nombrefac = nombrefac;
+	}
+
+	public String getNombrefac() {
+		return nombrefac;
+	}
+
+	public void setNombrefac(String nombrefac) {
+		this.nombrefac = nombrefac;
+	}
+	
+}
